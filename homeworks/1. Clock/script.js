@@ -61,27 +61,33 @@ function drawSticks() {
     var line = new Path2D();
 
     // draw seconds
-    line.moveTo(qX, qY);
-    line.lineTo(secondspX, secondspY);
+    var line1 = new Path2D();
+    line1.moveTo(qX, qY);
+    line1.lineTo(secondspX, secondspY);
 
     context.lineWidth = 1; 
-    context.stroke(line);
+    context.strokeStyle = "red";
+    context.stroke(line1);
 
     // draw minutes
-    var line = new Path2D();
-    line.moveTo(qX, qY);
-    line.lineTo(minutespX, minutespY);
+    var line2 = new Path2D();
+    line2.moveTo(qX, qY);
 
+    line2.lineTo(minutespX, minutespY);
     context.lineWidth = 2; 
-    context.stroke(line);
+
+    context.strokeStyle = "black";
+    context.stroke(line2);
 
     // draw hours
-    var line = new Path2D();
-    line.moveTo(qX, qY);
-    line.lineTo(hourspX, hourspY);
+    var line3 = new Path2D();
+
+    line3.moveTo(qX, qY);
+    line3.lineTo(hourspX, hourspY);
 
     context.lineWidth = 3; 
-    context.stroke(line);   
+    context.strokeStyle = "black";
+    context.stroke(line3);   
 }
 
 function drawWatch()
@@ -92,8 +98,9 @@ function drawWatch()
 
     drawSticks();
 
-    setTimeout(drawWatch, 1000);
+    setTimeout(drawWatch, 100);
 }
 
 drawWatch();
+
 
