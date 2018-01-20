@@ -2,17 +2,9 @@ var canvas = document.getElementById("sandbox");
 var context = canvas.getContext("2d");
 
 var R = 150;
-
+var i = 0;
 function Stripes() {
     var d, angle, pX, pY, qX, qY;
-
-    var circle = new Path2D();
-    circle.arc(R, R, R, 0, 2 * Math.PI);
-    context.stroke(circle);
-        
-    var circle = new Path2D();
-    circle.arc(R, R, R * 0.02, 0, 2 * Math.PI);
-    context.stroke(circle);
 
     for(d = 0; d < 60; ++d) {
         angle = (d / 60) * (2 * Math.PI);
@@ -28,9 +20,21 @@ function Stripes() {
         line.moveTo(pX, pY);
         line.lineTo(qX, qY);
 
-        context.lineWidth = ((d % 5) == 0) ? 3 : 1; 
+        context.lineWidth = ((d % 5) == 0) ? 2 : 1; 
         context.stroke(line);
     }
+    
+    var circle = new Path2D();
+    circle.arc(R, R, R, 0, 2 * Math.PI);
+    if (i = 0) {
+        context.strokeStyle = "green";
+        i = i+1;
+    }
+    context.stroke(circle);
+        
+    var circle = new Path2D();
+    circle.arc(R, R, R * 0.02, 0, 2 * Math.PI);
+    context.stroke(circle);
 }
 
 function drawSticks() {
@@ -65,7 +69,7 @@ function drawSticks() {
     line1.moveTo(qX, qY);
     line1.lineTo(secondspX, secondspY);
 
-    context.lineWidth = 1; 
+    context.lineWidth = 2; 
     context.strokeStyle = "red";
     context.stroke(line1);
 
@@ -74,7 +78,7 @@ function drawSticks() {
     line2.moveTo(qX, qY);
 
     line2.lineTo(minutespX, minutespY);
-    context.lineWidth = 2; 
+    context.lineWidth = 4; 
 
     context.strokeStyle = "black";
     context.stroke(line2);
@@ -85,7 +89,7 @@ function drawSticks() {
     line3.moveTo(qX, qY);
     line3.lineTo(hourspX, hourspY);
 
-    context.lineWidth = 3; 
+    context.lineWidth = 10; 
     context.strokeStyle = "black";
     context.stroke(line3);   
 }
