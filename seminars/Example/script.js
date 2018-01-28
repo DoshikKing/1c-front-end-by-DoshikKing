@@ -7,3 +7,7 @@ array.filter(function(x) {
 array.map(function(x) {
     return x * 2
 });
+
+array.forEach(function(x) {
+    console.log(x);
+});
