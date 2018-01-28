@@ -31,3 +31,25 @@ array.reverse();
 function getWaterState(temperature) {
     return temperature > 0 ? "Water" : "Ice";
 }
+
+// Вызываем функцию из массива и вводим сам массив с помощью return this
+
+function getCaller() {
+    return this;
+}
+
+var alice = {name : "Alice", fn : getCaller}
+
+alice.fn()
+
+// Создаем однотипные объекты с праметрами имя и возраст
+
+function Human(name, age) {
+    this.name = name;
+    this.age = age;
+    // return this
+}
+
+var alice = new Human("Alice", 19);
+
+alice
