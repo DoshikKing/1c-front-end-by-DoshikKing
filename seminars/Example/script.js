@@ -53,3 +53,33 @@ function Human(name, age) {
 var alice = new Human("Alice", 19);
 
 alice
+
+// Множество. Не хранит одинаковые элементы. Хранит уникальные элементы
+
+var numbers = new Set();
+
+numbers.add(42);
+
+//Set(2) {42}
+
+numbers.add(43);
+
+//Set(2) {42, 43}
+
+numbers.has(42);
+
+// true
+
+// Все удаляем
+
+numbers.clear();
+
+// Смотрим размер
+
+numbers.size();
+
+// Итерирование по множеству
+
+for (var item of colors) {
+    console.log(item);
+}
