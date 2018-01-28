@@ -18,3 +18,9 @@ array.sort();
 //Переворачивает массив
 
 array.reverse();
+
+//return temperature > 0 ? "Water" : "Ice"; - тоже самое что if{}else{}
+
+function getWaterState(temperature) {
+    return temperature > 0 ? "Water" : "Ice";
+}
