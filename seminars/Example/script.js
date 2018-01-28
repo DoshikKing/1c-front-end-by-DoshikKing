@@ -11,3 +11,10 @@ array.map(function(x) {
 array.forEach(function(x) {
     console.log(x);
 });
+
+//Сортирует массив по порядку
+array.sort();
+
+//Переворачивает массив
+
+array.reverse();
