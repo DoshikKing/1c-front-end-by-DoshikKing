@@ -3,7 +3,7 @@ var context = canvas.getContext("2d");
 
 var R = 150;
 var i = 0;
-function Stripes() {
+function drawStripes() {
     var d, angle, pX, pY, qX, qY;
 
     for(d = 0; d < 60; ++d) {
