@@ -8,8 +8,5 @@
   },
   "keywords": [],
   "author": "DoshikKing",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+  "license": "ISC"
 }
