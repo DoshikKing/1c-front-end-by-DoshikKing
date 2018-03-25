@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <nobr>
+            X^2&nbsp;+&nbsp;<input type="number" v-model.number = "b">&nbsp;X&nbsp;+&nbsp;<input type="number" v-model.number = "c">&nbsp;=&nbsp;0
+            <br>
+            D&nbsp;=&nbsp;{{ b*b - 4*c }}   
+            <br>
+            X1&nbsp;=&nbsp;{{ (-b - Math.sqrt(b*b - 4*c))/2 }}&nbsp;&nbsp;&nbsp;&nbsp;  
+            X1&nbsp;=&nbsp;{{ (-b + Math.sqrt(b*b - 4*c))/2 }}   
+        </nobr>
+    </div>
+    <div id="plot">
+    </div>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://wzrd.in/standalone/function-plot@1.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+</body>
+</html>

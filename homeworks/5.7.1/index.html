@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <nobr>
+            <input type="checkbox" v-model="checked1">
+        &&    
+            <input type="checkbox" v-model="checked2">
+        <br>     
+            <p>{{ checked1 && checked2 }}</p>   
+    </nobr>
+    </div>
+    <div id="liver">
+        <input type="range" v-model = "rating" min="0" max="5" step="1"><br>
+        <nobr>
+            <img style="height:30px" src="star.png" v-for = "x in Number(rating)">
+        </nobr>    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="script.js"></script>
+</body>
+</html>
